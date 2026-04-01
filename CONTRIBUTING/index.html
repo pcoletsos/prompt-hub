@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -1238,69 +1238,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contributing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Contributing
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Checklist
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-a-new-page" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add a New Page
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#submitting-a-change" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Submitting a Change
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#style-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Style Notes
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1317,73 +1256,11 @@
 
 
 
-  <h1>Contributing</h1>
-
-<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
-<p>Thanks for improving Prompt-Hub! This guide lists the essentials for contributing content.</p>
-<hr />
-<h2 id="quick-checklist">Quick Checklist<a class="headerlink" href="#quick-checklist" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Edit files under <code>docs/</code> only — never <code>gh-pages</code>.</li>
-<li>Keep pages short, clear, and useful; avoid link dumps.</li>
-<li>Add YAML front matter at the top:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Page</span><span class="nv"> </span><span class="s">Title&quot;</span>
-<span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;One-line</span><span class="nv"> </span><span class="s">why</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">matters&quot;</span>
-<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reading-list|note|cheatsheet|roadmap</span>
-<span class="nt">level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beginner|intermediate|advanced</span>
-<span class="nt">topics</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">llms</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">evals</span><span class="p p-Indicator">]</span>
-<span class="nt">updated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YYYY-MM-DD</span>
-<span class="nt">see_also</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./relative/link.md</span>
-<span class="nn">---</span>
-</code></pre></div>
-<ul>
-<li>Use relative links (e.g., <code>reading-lists/llm-systems.md</code>).</li>
-<li>Use fenced code blocks (```) so copy buttons appear.</li>
-<li>For tabs/accordions, follow Material syntax (see Developing).</li>
-</ul>
-<hr />
-<h2 id="add-a-new-page">Add a New Page<a class="headerlink" href="#add-a-new-page" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Create the file under <code>docs/</code></p>
-</li>
-<li>
-<p>Add front matter (see above)</p>
-</li>
-<li>
-<p>(Optional) Add to sidebar nav: edit <code>mkdocs.yml</code> → <code>nav:</code></p>
-</li>
-<li>
-<p>(Optional) Update topics index:</p>
-</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="n">powershell</span> <span class="n">-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="o">-File</span> <span class="n">scripts</span><span class="p">/</span><span class="n">generate-topic-index</span><span class="p">.</span><span class="n">ps1</span>
-</code></pre></div>
-<ol>
-<li>Preview locally:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
-</code></pre></div>
-<hr />
-<h2 id="submitting-a-change">Submitting a Change<a class="headerlink" href="#submitting-a-change" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Open a Pull Request to <code>main</code>.</li>
-<li>CI checks must pass:</li>
-<li>Strict MkDocs build</li>
-<li>Link check on Markdown sources</li>
-<li>After merge to <code>main</code>, the site is deployed automatically to GitHub Pages.</li>
-</ul>
-<hr />
-<h2 id="style-notes">Style Notes<a class="headerlink" href="#style-notes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Prefer concise bullets and short paragraphs.</li>
-<li>Use meaningful section headers.</li>
-<li>Prefer en/em dashes (–/—) over hyphen spam where appropriate.</li>
-<li>Keep link text descriptive (not "here").</li>
-</ul>
+<h1 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h1>
+<p>The canonical contribution workflow for this repo lives in the repository root <code>CONTRIBUTING.md</code> and on GitHub:
+<a href="https://github.com/pcoletsos/prompt-hub/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+<p>Use that file for the current process, branch naming, milestone rules, and validation guidance.</p>
+<p>GitHub issues and milestones remain the live source of truth.</p>
 
 
 
